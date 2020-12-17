@@ -1,0 +1,2 @@
+alert http $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"[Perch Security] Hunting PHP Shell"; content:"<?php"; http_client_body; pcre:"/<\?php [\s@]?(system|echo shell_exec|define|eval)\(\$/P"; tag:session,10,packets; classtype:trojan-activity; sid:900074; rev:2;)
+
