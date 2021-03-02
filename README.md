@@ -8,3 +8,9 @@
 <h2>Mozi Tracker</h2>
 <p>We see thousands of Mozi bots attempting to spread on a monthly basis.  The Mozi tracker is a CSV of all the Mozi URLs we've seen actively in use in the past 14 days.</p>
 
+<h2>Domains</h2>
+<p>This is a list of domain names that malware samples attempted to connect to when run through the PerchLabs internal sanbox.</p>
+<h2>IPs</h2>
+<p>This is a list of IP addresses that malware samples attempted to connect to when run through the PerchLabs internal sanbox.</p>
+<h2>Suricata</h2>
+<p>Suricata rules created by the PerchLabs team (Mostly Stu).</p>
