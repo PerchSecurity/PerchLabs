@@ -2,7 +2,7 @@
 <p><img src="https://github.com/PerchSecurity/PerchLabs/blob/main/images/CRU-main-tagline.png" width="250">
 </p>
 <h1> ConnectWise Cyber Research Unit Threat Feeds</h1>
-<p>This repository contains lists of threat intelligence discovered by the CRU using our internal sandbox built on top of the Perch platform or found while threat hunting. This is data that the CRU has been collecting for years and using internally at ConnectWise for threat hunting and threat analysis assistance.</p>
+<p>This repository contains lists of threat intelligence discovered by the CRU using our internal sandbox built on top of the Perch platform or found while threat hunting. This data is threat intelligence the CRU has been collecting for years and using internally at ConnectWise for threat hunting and threat analysis assistance. We check intelligence data daily against our customer's network data to find new threats and filter out false positives.  This feed is updated daily.</p>
 <br />
 <br />
 <h2>Mozi Tracker</h2>
