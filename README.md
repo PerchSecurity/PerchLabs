@@ -1,5 +1,5 @@
 
-<p><img align="left" src="https://github.com/PerchSecurity/PerchLabs/blob/main/images/CRU-main-tagline.png" width="250">
+<p><img src="https://github.com/PerchSecurity/PerchLabs/blob/main/images/CRU-main-tagline.png" width="250">
 </p>
 <h1> ConnectWise Cyber Research Unit Threat Feeds</h1>
 <p>This repo contains lists of indicators of compromise discovered by the CRU using our internal sandbox or found while threat hunting.</p>
