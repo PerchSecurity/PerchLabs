@@ -1,6 +1,6 @@
 
-<img align="left" src="https://github.com/PerchSecurity/PerchLabs/blob/main/images/CRU-main-tagline.png" width="250">
-</ br>
+<p><img align="left" src="https://github.com/PerchSecurity/PerchLabs/blob/main/images/CRU-main-tagline.png" width="250">
+</p>
 <h1> ConnectWise Cyber Research Unit Threat Feeds</h1>
 <p>This repo contains lists of indicators discovered by the CRU using our internal sandbox or found while thrunting through customer data.  We currently have two lists, ips and domains.  For now these are simple lists but in the future we will be enriching the data with additional context.</p>
 <br />
