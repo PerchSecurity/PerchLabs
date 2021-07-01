@@ -11,3 +11,14 @@
 #        Webshells Ruleset       #
 #--------------------------------#
 
+alert http any any -> $HOME_NET any (msg:"[Perch Security] Suspicious P.A.S. Webshell Centreon Traffic"; flow:established, to_server; http.uri; content:"/centreon/search.php"; tag:session,5,packets; reference:url, www.cert.ssi.gouv.fr/uploads/CERTFR-2021-CTI-005.pdf; classtype:trojan-activity; sid:900260; rev:1; metadata: created_at 2021_02_19, updated_at 2021_02_19;)
+
+alert http $HTTP_SERVERS any -> $EXTERNAL_NET any (msg:"[Perch Security] China Chopper WebShell C# Observed Outbound"; flow:established,from_server; http.stat_code; content:"200"; file.data; content:"|3c 25 40 20|Page|20|Language=|22|C#|22 20|"; fast_pattern; content:"|25 3e|"; distance:0; classtype:trojan-activity; sid:900275; rev:1; metadata: created_at 2021_03_08, updated_at 2021_03_08;)
+
+# sportsball webshell
+alert http any any -> $HOME_NET $HTTP_PORTS (msg:"[Perch Security] SPORTSBALL Webshell HTTP Cookie"; flow:established, to_server; http.method; content:"POST"; http.cookie; content:"fqrspt"; content:"ZN2aDAB4rXsszEvCLrzgcvQ4oi5J1TuiRULlQbYwldE="; distance:0; tag:session,5,packets; reference:url, www.volexity.com/blog/2021/03/02/active-exploitation-of-microsoft-exchange-zero-day-vulnerabilities/; classtype:web-application-attack; sid:900277; rev:1; metadata: created_at 2021_03_09, updated_at 2021_03_09, cve CVE_2021_26855;)
+
+# dewmode webshell
+alert http $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"[Perch Security] DEWMODE WebShell Activity M1"; flow:established, to_server; http.method; content:"GET"; http.uri; content:"/courier/"; content:".html?"; content:"dwn="; content:"fn="; tag:session,5,packets; reference:url, www.fireeye.com/blog/threat-research/2021/02/accellion-fta-exploited-for-data-theft-and-extortion.html; classtype:attempted-admin; sid:900278; rev:1; metadata: created_at 2021_03_09, updated_at 2021_03_09;)
+alert http $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"[Perch Security] DEWMODE WebShell Activity M2"; flow:established, to_server; http.method; content:"GET"; http.uri; content:"/courier/"; content:".html?"; distance:0; content:"aid="; distance:0; tag:session,5,packets; reference:url, www.fireeye.com/blog/threat-research/2021/02/accellion-fta-exploited-for-data-theft-and-extortion.html; classtype:attempted-admin; sid:900279; rev:1; metadata: created_at 2021_03_09, updated_at 2021_03_09;)
+alert http $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"[Perch Security] DEWMODE WebShell CleanUp"; flow:established, to_server; http.method; content:"GET"; http.uri; content:"/courier/"; content:"csrftoken=11454bd782bb41db213d415e10a0fb3c"; tag:session,5,packets; reference:url, www.fireeye.com/blog/threat-research/2021/02/accellion-fta-exploited-for-data-theft-and-extortion.html; classtype:attempted-admin; sid:900280; rev:1; metadata: created_at 2021_03_09, updated_at 2021_03_09;)
